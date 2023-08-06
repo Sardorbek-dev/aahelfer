@@ -30,3 +30,6 @@ class TransportView(TemplateView):
 
 class PackagingView(TemplateView):
     template_name = 'packaging.html'
+
+class ProcessView(TemplateView):
+    template_name = 'process.html'

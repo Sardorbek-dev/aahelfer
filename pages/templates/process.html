@@ -1,0 +1,404 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- BREADCRUMB AREA START -->
+<div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image "  data-bs-bg="{% static 'img/bg/14.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ltn__breadcrumb-inner">
+                    <h1 class="page-title">Unser Arbeitsprozess</h1>
+                    <div class="ltn__breadcrumb-list">
+                        <ul>
+                            <li><a href="{% url 'home' %}"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Home</a></li>
+                            <li>Process</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BREADCRUMB AREA END -->
+
+<!-- OUR HISTORY AREA START -->
+<div class="ltn__our-history-area pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ltn__our-history-inner">
+                    <div class="ltn__tab-menu text-uppercase">
+                        <div class="nav">
+                            <a class="active show" data-bs-toggle="tab" href="#liton_tab_2_1">Beratung</a>
+                            <a data-bs-toggle="tab" href="#liton_tab_2_2">Vereinbarung</a>
+                            <a data-bs-toggle="tab" href="#liton_tab_2_3">Vorbereitung</a>
+                            <a data-bs-toggle="tab" href="#liton_tab_2_4">Transport</a>
+                            <a data-bs-toggle="tab" href="#liton_tab_2_5">Abschluss</a>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="liton_tab_2_1">
+                            <div class="ltn__product-tab-content-inner">
+                                <div class="row">
+                                    <div class="col-lg-6 align-self-center">
+                                        <div class="about-us-img-wrap about-img-left">
+                                            <img src="{% static 'img/img-slide/12.jpg' %}" alt="Image">
+                                            <div class="ltn__history-icon">
+                                                <i class="fas fa-award"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 align-self-center">
+                                        <div class="about-us-info-wrap">
+                                            <div class="section-title-area ltn__section-title-2--- text-center---">
+                                                <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Beratung</h6>
+                                                <h1 class="section-title">Beratung und Planung</h1>
+                                                <p>
+                                                    Der erste Schritt besteht darin, mit dem Kunden in Kontakt zu treten und eine umfassende Beratung durchzuführen.
+                                                    In diesem Stadium ermitteln die Umzugsprofis die spezifischen Anforderungen und Bedürfnisse des Kunden.
+                                                </p>
+                                            </div>
+
+                                            <p>
+                                                Dies umfasst die Größe des Umzugs, den Umfang der Dienstleistungen, die benötigt werden, den Zeitplan und eventuelle besondere Anforderungen.
+                                                Anhand dieser Informationen wird ein individueller Umzugsplan erstellt, der alle Details des Umzugs umfasst, von der Verpackung über den Transport bis zur Montage.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="liton_tab_2_2">
+                            <div class="ltn__product-tab-content-inner">
+                                <div class="row">
+                                    <div class="col-lg-6 align-self-center">
+                                        <div class="about-us-img-wrap about-img-left">
+                                            <img src="{% static 'img/img-slide/11.jpg' %}" alt="Image">
+                                            <div class="ltn__history-icon">
+                                                <i class="icon-award"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 align-self-center">
+                                        <div class="about-us-info-wrap">
+                                            <div class="section-title-area ltn__section-title-2--- text-center---">
+                                                <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Vereinbarung</h6>
+                                                <h1 class="section-title">Angebotserstellung und Vereinbarung</h1>
+                                                <p>
+                                                    Basierend auf der Beratung erstellt die Umzugsfirma ein detailliertes Angebot für den Kunden.
+                                                    Dieses Angebot umfasst die geschätzten Kosten für die Dienstleistungen sowie den Umzugszeitplan.
+                                                </p>
+                                            </div>
+                                            <p>
+                                                Der Kunde hat die Möglichkeit, das Angebot zu überprüfen, Fragen zu stellen und eventuelle Anpassungen vorzunehmen.
+                                                Sobald beide Parteien mit den Details zufrieden sind, wird die Vereinbarung unterzeichnet und der Umzugstermin wird festgelegt.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="liton_tab_2_3">
+                            <div class="ltn__product-tab-content-inner">
+                                <div class="row">
+                                    <div class="col-lg-6 align-self-center">
+                                        <div class="about-us-img-wrap about-img-left">
+                                            <img src="{% static 'img/img-slide/13.jpg' %}" alt="Image">
+                                            <div class="ltn__history-icon">
+                                                <i class="fas fa-medal"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 align-self-center">
+                                        <div class="about-us-info-wrap">
+                                            <div class="section-title-area ltn__section-title-2--- text-center---">
+                                                <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Vorbereitung</h6>
+                                                <h1 class="section-title">Vorbereitung und Verpackung</h1>
+                                                <p>
+                                                    Vor dem Umzugstag beginnt die Vorbereitung. Die Umzugsfirma stellt sicher,
+                                                    dass alle benötigten Verpackungsmaterialien und Ausrüstungen vorhanden sind.
+                                                    Das erfahrene Team packt die Gegenstände sorgfältig ein, um sicherzustellen,
+                                                    dass sie während des Transports gut geschützt sind.
+                                                </p>
+                                            </div>
+                                            <p>
+                                                Besondere Sorgfalt wird auf zerbrechliche und wertvolle Gegenstände gelegt.
+                                                Die Verpackung erfolgt nach einem organisierten System, um sicherzustellen, dass der Umzug reibungslos verläuft.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="liton_tab_2_4">
+                            <div class="ltn__product-tab-content-inner">
+                                <div class="row">
+                                    <div class="col-lg-6 align-self-center">
+                                        <div class="about-us-img-wrap about-img-left">
+                                            <img src="{% static 'img/img-slide/12.jpg' %}" alt="Image">
+                                            <div class="ltn__history-icon">
+                                                <i class="icon-award"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 align-self-center">
+                                        <div class="about-us-info-wrap">
+                                            <div class="section-title-area ltn__section-title-2--- text-center---">
+                                                <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Transport</h6>
+                                                <h1 class="section-title">Transport und Durchführung</h1>
+                                                <p>
+                                                    Am Umzugstag transportiert das Team die verpackten Gegenstände sicher zum Zielort.
+                                                    Während des Transports werden moderne Fahrzeuge und bewährte Logistikmethoden eingesetzt,
+                                                    um eine zuverlässige Lieferung zu gewährleisten.
+                                                </p>
+                                            </div>
+
+                                            <p>
+                                                Am Zielort übernimmt das Team die Montage und Platzierung der Möbel und Gegenstände
+                                                gemäß dem vorherigen Umzugsplan. Die Umzugsfirma sorgt dafür, dass alles ordnungsgemäß
+                                                installiert wird und der Kunde mit dem Ergebnis zufrieden ist.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="liton_tab_2_5">
+                            <div class="ltn__product-tab-content-inner">
+                                <div class="row">
+                                    <div class="col-lg-6 align-self-center">
+                                        <div class="about-us-img-wrap about-img-left">
+                                            <img src="{% static 'img/img-slide/11.jpg' %}" alt="Image">
+                                            <div class="ltn__history-icon">
+                                                <i class="fas fa-trophy"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 align-self-center">
+                                        <div class="about-us-info-wrap">
+                                            <div class="section-title-area ltn__section-title-2--- text-center---">
+                                                <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Abschluss</h6>
+                                                <h1 class="section-title">Abschluss und Kundenzufriedenheit</h1>
+                                                <p>
+                                                    Nach Abschluss des Umzugs überprüfen die Umzugsprofis gemeinsam mit dem Kunden alle durchgeführten Arbeiten,
+                                                    um sicherzustellen, dass alles gemäß den Vereinbarungen erledigt wurde. Etwaige Anliegen oder Fragen des Kunden
+                                                    werden besprochen und geklärt.
+                                                </p>
+                                            </div>
+                                            <p>
+                                                Die Umzugsfirma stellt sicher, dass der Kunde mit dem Umzugsergebnis zufrieden ist und ein positives Erlebnis hatte.
+                                                Kundenzufriedenheit hat höchste Priorität, und die Umzugsfirma ist bestrebt, sicherzustellen, dass der Kunde den Umzug
+                                                als reibungslos und stressfrei empfindet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- OUR HISTORY AREA END -->
+
+<!-- FEATURE AREA START ( Feature - 6) -->
+<div class="ltn__feature-area section-bg-2 pt-115 pb-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title-area ltn__section-title-2--- text-center">
+                    <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Features</h6>
+                    <h1 class="section-title">Why Choose Us</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-4 col-sm-6 col-12">
+                <div class="ltn__feature-item ltn__feature-item-7 ltn__feature-item-7-color-white">
+                    <div class="ltn__feature-icon-title">
+                        <div class="ltn__feature-icon">
+                            <span><i class="flaticon-house-4"></i></span>
+                        </div>
+                        <h3><a href="service-details.html">The Perfect Residency</a></h3>
+                    </div>
+                    <div class="ltn__feature-info">
+                        <p>Lorem ipsum dolor sit ame it, consectetur adipisicing elit, sed do eiusmod te mp or incididunt ut labore.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-sm-6 col-12">
+                <div class="ltn__feature-item ltn__feature-item-7 ltn__feature-item-7-color-white">
+                    <div class="ltn__feature-icon-title">
+                        <div class="ltn__feature-icon">
+                            <span><i class="icon-mechanic"></i></span>
+                        </div>
+                        <h3><a href="service-details.html">Global Architect Experts</a></h3>
+                    </div>
+                    <div class="ltn__feature-info">
+                        <p>Lorem ipsum dolor sit ame it, consectetur adipisicing elit, sed do eiusmod te mp or incididunt ut labore.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-sm-6 col-12">
+                <div class="ltn__feature-item ltn__feature-item-7 ltn__feature-item-7-color-white">
+                    <div class="ltn__feature-icon-title">
+                        <div class="ltn__feature-icon">
+                            <span><i class="icon-repair-1"></i></span>
+                        </div>
+                        <h3><a href="service-details.html">Built-in Storage Cupboards</a></h3>
+                    </div>
+                    <div class="ltn__feature-info">
+                        <p>Lorem ipsum dolor sit ame it, consectetur adipisicing elit, sed do eiusmod te mp or incididunt ut labore.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FEATURE AREA END -->
+
+    <!-- CATEGORY AREA START -->
+    <div class="ltn__category-area ltn__product-gutter section-bg-1--- pt-115 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2--- text-center">
+                        <h6 class="section-subtitle section-subtitle-2--- ltn__secondary-color">Our Aminities</h6>
+                        <h1 class="section-title">Building Aminities</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row ltn__category-slider-active--- slick-arrow-1 justify-content-center">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="ltn__category-item ltn__category-item-5 ltn__category-item-5-2 text-center---">
+                        <a href="shop.html">
+                            <span class="category-icon"><i class="flaticon-car"></i></span>
+                            <span class="category-number">01</span>
+                            <span class="category-title">Parking Space</span>
+                            <span class="category-brief">
+                                Enimad minim veniam quis no exercitation ullamco lab
+                            </span>
+                            <span class="category-btn d-none"><i class="flaticon-right-arrow"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="ltn__category-item ltn__category-item-5 ltn__category-item-5-2 text-center---">
+                        <a href="shop.html">
+                            <span class="category-icon"><i class="flaticon-swimming"></i></span>
+                            <span class="category-number">02</span>
+                            <span class="category-title">Swimming Pool</span>
+                            <span class="category-brief">
+                                Enimad minim veniam quis no exercitation ullamco lab
+                            </span>
+                            <span class="category-btn d-none"><i class="flaticon-right-arrow"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="ltn__category-item ltn__category-item-5 ltn__category-item-5-2 text-center---">
+                        <a href="shop.html">
+                            <span class="category-icon"><i class="flaticon-secure-shield"></i></span>
+                            <span class="category-number">03</span>
+                            <span class="category-title">Private Security</span>
+                            <span class="category-brief">
+                                Enimad minim veniam quis no exercitation ullamco lab
+                            </span>
+                            <span class="category-btn d-none"><i class="flaticon-right-arrow"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="ltn__category-item ltn__category-item-5 ltn__category-item-5-2 text-center---">
+                        <a href="shop.html">
+                            <span class="category-icon"><i class="flaticon-stethoscope"></i></span>
+                            <span class="category-number">04</span>
+                            <span class="category-title">Medical Center</span>
+                            <span class="category-brief">
+                                Enimad minim veniam quis no exercitation ullamco lab
+                            </span>
+                            <span class="category-btn d-none"><i class="flaticon-right-arrow"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="ltn__category-item ltn__category-item-5 ltn__category-item-5-2 text-center---">
+                        <a href="shop.html">
+                            <span class="category-icon"><i class="flaticon-book"></i></span>
+                            <span class="category-number">05</span>
+                            <span class="category-title">Library Area</span>
+                            <span class="category-brief">
+                                Enimad minim veniam quis no exercitation ullamco lab
+                            </span>
+                            <span class="category-btn d-none"><i class="flaticon-right-arrow"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="ltn__category-item ltn__category-item-5 ltn__category-item-5-2 text-center---">
+                        <a href="shop.html">
+                            <span class="category-icon"><i class="flaticon-bed-1"></i></span>
+                            <span class="category-number">06</span>
+                            <span class="category-title">King Size Beds</span>
+                            <span class="category-brief">
+                                Enimad minim veniam quis no exercitation ullamco lab
+                            </span>
+                            <span class="category-btn d-none"><i class="flaticon-right-arrow"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="ltn__category-item ltn__category-item-5 ltn__category-item-5-2 text-center---">
+                        <a href="shop.html">
+                            <span class="category-icon"><i class="flaticon-home-2"></i></span>
+                            <span class="category-number">07</span>
+                            <span class="category-title">Smart Homes</span>
+                            <span class="category-brief">
+                                Enimad minim veniam quis no exercitation ullamco lab
+                            </span>
+                            <span class="category-btn d-none"><i class="flaticon-right-arrow"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="ltn__category-item ltn__category-item-5 ltn__category-item-5-2 text-center---">
+                        <a href="shop.html">
+                            <span class="category-icon"><i class="flaticon-slider"></i></span>
+                            <span class="category-number">08</span>
+                            <span class="category-title">Kid’s Playland</span>
+                            <span class="category-brief">
+                                Enimad minim veniam quis no exercitation ullamco lab
+                            </span>
+                            <span class="category-btn d-none"><i class="flaticon-right-arrow"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CATEGORY AREA END -->
+
+<!-- CALL TO ACTION START (call-to-action-6) -->
+<div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="{% static 'img/1.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---">
+                    <div class="coll-to-info text-color-white">
+                        <h1>Looking for a dream home?</h1>
+                        <p>We can help you realize your dream of a new home</p>
+                    </div>
+                    <div class="btn-wrapper">
+                        <a class="btn btn-effect-3 btn-white" href="contact.html">Explore Properties <i class="icon-next"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- CALL TO ACTION END -->
+
+{% endblock  %}
