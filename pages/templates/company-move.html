@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- BREADCRUMB AREA START -->
+<div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image "  data-bs-bg="{% static 'img/bg/14.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ltn__breadcrumb-inner">
+                    <h1 class="page-title">Firmenumzüge</h1>
+                    <div class="ltn__breadcrumb-list">
+                        <ul>
+                            <li><a href="{% url 'home' %}"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Home</a></li>
+                            <li>Firmenumzug</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BREADCRUMB AREA END -->
+
+<!-- PAGE DETAILS AREA START (service-details) -->
+<div class="ltn__page-details-area ltn__service-details-area mb-105">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="ltn__page-details-inner ltn__service-details-inner">
+                    <p>
+                        Unsere Firmenumzugsservices sind darauf ausgerichtet, den Übergang Ihres Unternehmens an einen neuen Standort so reibungslos wie möglich zu gestalten.
+                        Wir verstehen, dass bei einem Firmenumzug Effizienz und Zeitmanagement von entscheidender Bedeutung sind. Daher bieten wir Ihnen maßgeschneiderte Lösungen,
+                        die Ihre Geschäftsanforderungen berücksichtigen.
+                    </p>
+                    <div class="ltn__blog-img">
+                        <img src="{% static 'img/service/21.jpg' %}" alt="Image">
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img src="{% static 'img/service/31.jpg' %}" alt="image">
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="{% static 'img/service/32.jpg' %}" alt="image">
+                        </div>
+                    </div>
+                    <p>
+                        Unser erfahrenes Team plant und koordiniert jeden Aspekt Ihres Umzugs, von der sorgfältigen Verpackung Ihrer Büroeinrichtung bis zur fachgerechten Montage am neuen Standort.
+                        Wir minimieren Ausfallzeiten und sorgen dafür, dass Ihr Unternehmen schnell wieder betriebsbereit ist. Unsere Expertise in der Logistik und im Projektmanagement ermöglicht es uns,
+                        Ihren Umzug effizient und professionell durchzuführen.
+                    </p>
+                    <p>
+                        Wir verstehen, dass jeder Firmenumzug einzigartig ist, daher arbeiten wir eng mit Ihnen zusammen, um sicherzustellen, dass Ihre Anforderungen erfüllt werden.
+                        Mit unseren Firmenumzugsservices können Sie sich darauf verlassen, dass Ihr Unternehmen einen nahtlosen Übergang erlebt und die Produktivität so schnell wie
+                        möglich wieder aufgenommen wird.
+                    </p>
+                    <div class="ltn__service-list-menu text-uppercase mt-50 d-none">
+                        <ul>
+                            <li><i class="fas fa-car"></i> Front Brakes Repair <span class="service-price">$225.95 <span>Plus Parts</span></span> </li>
+                            <li><i class="fas fa-life-ring"></i> Rear Brakes Repair <span class="service-price">$225.95 <span>Plus Parts</span></span> </li>
+                            <li><i class="fas fa-cog"></i> Axle <span class="service-price">$225.95 <span>Plus Parts</span></span> </li>
+                            <li><i class="fas fa-car"></i> Starters / Alternators <span class="service-price">$225.95 <span>Plus Parts</span></span> </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <aside class="sidebar-area ltn__right-sidebar">
+                    <!-- Menu Widget -->
+                    <div class="widget-2 ltn__menu-widget ltn__menu-widget-2 text-uppercase">
+                        <ul>
+                            <li><a href="{% url 'private-move' %}">Privatumzüge <span><i class="fas fa-arrow-right"></i></span></a></li>
+                            <li class="active"><a href="{% url 'company-move' %}">Firmenumzüge <span><i class="fas fa-arrow-right"></i></span></a></li>
+                            <li><a href="{% url 'consulting' %}">Umzugsberatung <span><i class="fas fa-arrow-right"></i></span></a></li>
+                            <li><a href="{% url 'mon-and-demontage' %}">Mon- und Demontage <span><i class="fas fa-arrow-right"></i></span></a></li>
+                            <li><a href="{% url 'transport' %}">Transport <span><i class="fas fa-arrow-right"></i></span></a></li>
+                            <li><a href="{% url 'packaging' %}">Verpackungsservice <span><i class="fas fa-arrow-right"></i></span></a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- PAGE DETAILS AREA END -->
+
+<!-- CALL TO ACTION START (call-to-action-6) -->
+<div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="{% static 'img/1.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---">
+                    <div class="coll-to-info text-color-white">
+                        <h1>Looking for a dream home?</h1>
+                        <p>We can help you realize your dream of a new home</p>
+                    </div>
+                    <div class="btn-wrapper">
+                        <a class="btn btn-effect-3 btn-white" href="contact.html">Explore Properties <i class="icon-next"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- CALL TO ACTION END -->
+
+{% endblock  %}

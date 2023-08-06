@@ -9,3 +9,24 @@ class AboutPageView(TemplateView):
 
 class ContactCreateView(TemplateView):
     template_name = 'contact.html'
+
+class OurServicesView(TemplateView):
+    template_name = 'our-services.html'
+
+class PrivateMoveView(TemplateView):
+    template_name = 'private-move.html'
+
+class CompanyMoveView(TemplateView):
+    template_name = 'company-move.html'
+
+class ConsultingView(TemplateView):
+    template_name = 'consulting.html'
+
+class MontageView(TemplateView):
+    template_name = 'montage.html'
+
+class TransportView(TemplateView):
+    template_name = 'transport.html'
+
+class PackagingView(TemplateView):
+    template_name = 'packaging.html'

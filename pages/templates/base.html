@@ -95,9 +95,9 @@
                                                     <li><a href="locations.html">Google Map Location</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="menu-icon"><a href="#">Services</a>
+                                            <li class="menu-icon"><a href="{% url 'our-services' %}">Services</a>
                                                 <ul class="mega-menu">
-                                                    <li><a href="#">Inner Pages</a>
+                                                    <li><a href="{% url 'our-services' %}">Inner Pages</a>
                                                         <ul>
                                                             <li><a href="portfolio.html">Portfolio</a></li>
                                                             <li><a href="portfolio-2.html">Portfolio - 02</a></li>
@@ -107,7 +107,7 @@
                                                             <li><a href="faq.html">FAQ</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li><a href="#">Inner Pages</a>
+                                                    <li><a href="{% url 'our-services' %}">Inner Pages</a>
                                                         <ul>
                                                             <li><a href="history.html">History</a></li>
                                                             <li><a href="add-listing.html">Add Listing</a></li>
@@ -318,6 +318,8 @@
             </div>
         </div>
         <!-- Utilize Mobile Menu End -->
+
+        <div class="ltn__utilize-overlay"></div>
 
         {% block content %}
 
