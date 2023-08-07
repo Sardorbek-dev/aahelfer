@@ -33,3 +33,12 @@ class PackagingView(TemplateView):
 
 class ProcessView(TemplateView):
     template_name = 'process.html'
+
+class HouseholdLiquidationView(TemplateView):
+    template_name = 'household-liquidation.html'
+
+class CompanyLiquidationView(TemplateView):
+    template_name = 'company-liquidation.html'
+
+class HouseCleaningView(TemplateView):
+    template_name = 'house-cleaning.html'
