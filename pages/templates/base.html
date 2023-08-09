@@ -91,8 +91,7 @@
                                             <li class="menu-icon"><a href="{% url 'about' %}">Über uns</a>
                                                 <ul>
                                                     <li><a href="{% url 'about' %}">Über uns</a></li>
-                                                    <li><a href="faq.html">FAQ</a></li>
-                                                    <li><a href="locations.html">Google Map Location</a></li>
+                                                    <li><a href="{% url 'faq' %}">FAQ</a></li>
                                                 </ul>
                                             </li>
                                             <li class="menu-icon"><a href="{% url 'our-services' %}">Services</a>
@@ -204,8 +203,7 @@
                         <li><a href="{% url 'about' %}">Über uns</a>
                             <ul class="sub-menu">
                                 <li><a href="{% url 'about' %}">Über uns</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li><a href="locations.html">Google Map Locations</a></li>
+                                <li><a href="{% url 'faq' %}">FAQ</a></li>
                             </ul>
                         </li>
                         <li><a href="{% url 'our-services' %}">Services</a>

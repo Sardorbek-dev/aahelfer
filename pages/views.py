@@ -42,3 +42,6 @@ class CompanyLiquidationView(TemplateView):
 
 class HouseCleaningView(TemplateView):
     template_name = 'house-cleaning.html'
+
+class FaqView(TemplateView):
+    template_name = 'faq.html'
