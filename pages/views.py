@@ -45,3 +45,9 @@ class HouseCleaningView(TemplateView):
 
 class FaqView(TemplateView):
     template_name = 'faq.html'
+
+class ImprintView(TemplateView):
+    template_name = 'imprint.html'
+
+class DataProtectionView(TemplateView):
+    template_name = 'data-protection.html'
