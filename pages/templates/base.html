@@ -35,8 +35,7 @@
                         <div class="col-md-7">
                             <div class="ltn__top-bar-menu">
                                 <ul>
-                                    <li><a href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you"><i class="icon-mail"></i> info@webmail.com</a></li>
-                                    <li><a href="locations.html"><i class="icon-placeholder"></i> 15/A, Nest Tower, NYC</a></li>
+                                    <li><a href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you"><i class="icon-mail"></i>info@aplusahelfer.de</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -59,7 +58,7 @@
                                         <li>
                                             <!-- header-top-btn -->
                                             <div class="header-top-btn">
-                                                <a href="add-listing.html">Add Listing</a>
+                                                <a href="{% url 'contact' %}">Kontaktieren</a>
                                             </div>
                                         </li>
                                     </ul>
@@ -133,33 +132,15 @@
                             </div>
                         </div>
                         <div class="col ltn__header-options ltn__header-options-2 mb-sm-20">
-                            <!-- header-search-1 -->
-                            <div class="header-search-wrap">
-                                <div class="header-search-1">
-                                    <div class="search-icon">
-                                        <i class="icon-search for-search-show"></i>
-                                        <i class="icon-cancel  for-search-close"></i>
-                                    </div>
-                                </div>
-                                <div class="header-search-1-form">
-                                    <form id="#" method="get"  action="#">
-                                        <input type="text" name="search" value="" placeholder="Search here..."/>
-                                        <button type="submit">
-                                            <span><i class="icon-search"></i></span>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
                             <!-- user-menu -->
                             <div class="ltn__drop-menu user-menu">
                                 <ul>
                                     <li>
                                         <a href="#"><i class="icon-user"></i></a>
                                         <ul>
-                                            <li><a href="login.html">Sign in</a></li>
-                                            <li><a href="register.html">Register</a></li>
-                                            <li><a href="account.html">My Account</a></li>
-                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                            <li><a href="#">Anmelden</a></li>
+                                            <li><a href="#">Registrieren</a></li>
+                                            <li><a href="#">Mein Profil</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -190,12 +171,6 @@
                         <a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="Logo"></a>
                     </div>
                     <button class="ltn__utilize-close">×</button>
-                </div>
-                <div class="ltn__utilize-menu-search-form">
-                    <form action="#">
-                        <input type="text" placeholder="Search...">
-                        <button><i class="fas fa-search"></i></button>
-                    </form>
                 </div>
                 <div class="ltn__utilize-menu">
                     <ul>
@@ -234,11 +209,11 @@
                 <div class="ltn__utilize-buttons ltn__utilize-buttons-2">
                     <ul>
                         <li>
-                            <a href="account.html" title="My Account">
+                            <a href="#" title="Mein Profil">
                                 <span class="utilize-btn-icon">
                                     <i class="far fa-user"></i>
                                 </span>
-                                My Account
+                                Mein Profil
                             </a>
                         </li>
                     </ul>
@@ -293,7 +268,7 @@
                                         <img src="{% static 'img/logo-2.png' %}" alt="Logo">
                                     </div>
                                 </div>
-                                <p>Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.</p>
+                                <p> Ihr Partner für reibungslose Umzüge und professionelle Dienstleistungen.</p>
                                 <div class="footer-address">
                                     <ul>
                                         <li>
@@ -301,7 +276,7 @@
                                                 <i class="icon-placeholder"></i>
                                             </div>
                                             <div class="footer-address-info">
-                                                <p>Brooklyn, New York, United States</p>
+                                                <p>Franz-Wolter-Straße 5 <br> 81925 München</p>
                                             </div>
                                         </li>
                                         <li>
@@ -309,7 +284,7 @@
                                                 <i class="icon-call"></i>
                                             </div>
                                             <div class="footer-address-info">
-                                                <p><a href="tel:+0123-456789">+0123-456789</a></p>
+                                                <p><a href="tel:+0123-456789">+49 17621754911</a></p>
                                             </div>
                                         </li>
                                         <li>
@@ -317,7 +292,7 @@
                                                 <i class="icon-mail"></i>
                                             </div>
                                             <div class="footer-address-info">
-                                                <p><a href="mailto:example@example.com">example@example.com</a></p>
+                                                <p><a href="mailto:info@aplusahelfer.de">info@aplushelfer.de</a></p>
                                             </div>
                                         </li>
                                     </ul>
@@ -334,45 +309,41 @@
                         </div>
                         <div class="col-xl-2 col-md-6 col-sm-6 col-12">
                             <div class="footer-widget footer-menu-widget clearfix">
-                                <h4 class="footer-title">Company</h4>
+                                <h4 class="footer-title">Unternehmen</h4>
                                 <div class="footer-menu">
                                     <ul>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="shop.html">All Products</a></li>
-                                        <li><a href="locations.html">Locations Map</a></li>
-                                        <li><a href="faq.html">FAQ</a></li>
-                                        <li><a href="contact.html">Contact us</a></li>
+                                        <li><a href="{% url 'about' %}">Über uns</a></li>
+                                        <li><a href="{% url 'process' %}">Arbeitsprozess</a></li>
+                                        <li><a href="{% url 'contact' %}">Location</a></li>
+                                        <li><a href="{% url 'contact' %}">Kontakt</a></li>
+                                        <li><a href="{% url 'faq' %}">FAQ</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-2 col-md-6 col-sm-6 col-12">
                             <div class="footer-widget footer-menu-widget clearfix">
-                                <h4 class="footer-title">Services</h4>
+                                <h4 class="footer-title">Service</h4>
                                 <div class="footer-menu">
                                     <ul>
-                                        <li><a href="order-tracking.html">Order tracking</a></li>
-                                        <li><a href="wishlist.html">Wish List</a></li>
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="account.html">My account</a></li>
-                                        <li><a href="about.html">Terms & Conditions</a></li>
-                                        <li><a href="about.html">Promotional Offers</a></li>
+                                        <li><a href="{% url 'private-move' %}">Privatumzüge</a></li>
+                                        <li><a href="{% url 'company-move' %}">Firmenumzüge</a></li>
+                                        <li><a href="{% url 'consulting' %}">Umzugsberatung</a></li>
+                                        <li><a href="{% url 'house-cleaning' %}">Hausreinigung</a></li>
+                                        <li><a href="{% url 'transport' %}">Transport</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-2 col-md-6 col-sm-6 col-12">
                             <div class="footer-widget footer-menu-widget clearfix">
-                                <h4 class="footer-title">Customer Care</h4>
+                                <h4 class="footer-title">Aktuelles</h4>
                                 <div class="footer-menu">
                                     <ul>
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="account.html">My account</a></li>
-                                        <li><a href="wishlist.html">Wish List</a></li>
-                                        <li><a href="order-tracking.html">Order tracking</a></li>
-                                        <li><a href="faq.html">FAQ</a></li>
-                                        <li><a href="contact.html">Contact us</a></li>
+                                        <li><a href="{% url 'contact' %}">Partner werden</a></li>
+                                        <li><a href="{% url 'contact' %}">Feedback</a></li>
+                                        <li><a href="{% url 'contact' %}">Anfrage</a></li>
+                                        <li><a href="{% url 'contact' %}">Jobs</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -380,7 +351,7 @@
                         <div class="col-xl-3 col-md-6 col-sm-12 col-12">
                             <div class="footer-widget footer-newsletter-widget">
                                 <h4 class="footer-title">Newsletter</h4>
-                                <p>Subscribe to our weekly Newsletter and receive updates via email.</p>
+                                <p>Abonnieren Sie unseren wöchentlichen Newsletter und erhalten Sie aktuelle Informationen per E-Mail.</p>
                                 <div class="footer-newsletter">
                                     <form action="#">
                                         <input type="email" name="email" placeholder="Email*">
@@ -389,7 +360,7 @@
                                         </div>
                                     </form>
                                 </div>
-                                <h5 class="mt-30">We Accept</h5>
+                                <h5 class="mt-30">Wir akzeptieren</h5>
                                 <img src="{% static 'img/icons/payment-4.png' %}" alt="Payment Image">
                             </div>
                         </div>
