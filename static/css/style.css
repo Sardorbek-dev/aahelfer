@@ -6249,7 +6249,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   left: auto; }
 
 .slick-slide-arrow-1:hover .slick-arrow {
-  opacity: 1;
+  display: none;
   visibility: visible;
   left: 20px; }
 
@@ -6269,7 +6269,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 @media (min-width: 1400px) {
   .slick-slide-arrow-1:hover .slick-arrow {
-    opacity: 1;
+    display: none;
     visibility: visible;
     left: 60px; }
   .slick-slide-arrow-1:hover .slick-next {
@@ -6450,9 +6450,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   z-index: 2; }
 
 .ltn__slide-item-3 .slide-item-img {
-  width: 45%;
+  width: 35%;
   position: absolute;
-  right: 150px;
+  right: 280px;
   top: auto;
   bottom: 100px;
   height: 70%; }
@@ -8568,7 +8568,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(../img/bg/21.jpg);
+    background-image: url(../img/bg/about-5.jpg);
     height: 100%;
     width: 48%;
     left: auto;
