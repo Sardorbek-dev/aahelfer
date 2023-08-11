@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Responsive css -->
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- AOS css -->
+    <link rel="stylesheet" href="{% static 'css/vendors/aos.css' %}">
 </head>
 
 <body>
@@ -115,7 +117,7 @@
                                                             <li><a href="{% url 'contact' %}">VIP Umzüge</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li><a href="shop.html" style="width: 17rem;"><img src="{% static 'img/banner/menu-banner-1.jpg' %}" alt="#"></a>
+                                                    <li><a href="shop.html" style="width: 21rem;"><img src="{% static 'img/banner/header_1.jpg' %}" alt="#"></a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -140,7 +142,6 @@
                                         <ul>
                                             <li><a href="#">Anmelden</a></li>
                                             <li><a href="#">Registrieren</a></li>
-                                            <li><a href="#">Mein Profil</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -605,5 +606,11 @@
     <script src="{% static 'js/plugins.js' %}"></script>
     <!-- Main JS -->
     <script src="{% static 'js/main.js' %}"></script>
+    <!-- AOS JS -->
+    <script src="{% static 'js/vendors/aos.js' %}"></script>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
