@@ -10013,8 +10013,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   margin-top: 0;
   font-size: 30px; }
 
-.ltn__page-details-inner .ltn__blog-img {
+/*.ltn__page-details-inner .ltn__blog-img {
   margin-bottom: 40px; }
+*/
 
 .ltn__page-details-inner .img-radius img {
   border-radius: 0px 0px 0px 35px; }
@@ -10219,8 +10220,8 @@ blockquote {
   .ltn__page-details-inner .ltn__blog-title {
     margin-top: 0;
     font-size: 24px; }
-  .ltn__page-details-inner .ltn__blog-img {
-    margin-bottom: 40px; }
+/*  .ltn__page-details-inner .ltn__blog-img {
+    margin-bottom: 40px; }*/
   .ltn__blog-details-wrap {
     padding: 50px 20px; }
   blockquote {
