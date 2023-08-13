@@ -68,52 +68,65 @@
             <div class="col-lg-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                 data-aos-delay="200" data-aos-duration="800">
                 <div class="ltn__form-box contact-form-box box-shadow white-bg">
-                    <h4 class="title-2">Kontaktformular</h4>
-                    <form id="contact-form" action="mail.php" method="post">
+                    {% if messages %}
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="input-item input-item-name ltn__custom-icon">
-                                    <input type="text" name="firstname" placeholder="Vorname*">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="input-item input-item-name ltn__custom-icon">
-                                    <input type="text" name="lastname" placeholder="Nachname*">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="input-item input-item-email ltn__custom-icon">
-                                    <input type="email" name="email" placeholder="E-Mail Adresse*">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="input-item input-item-phone ltn__custom-icon">
-                                    <input type="text" name="phone" placeholder="Telefonnummer*">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="input-item">
-                                    <select class="nice-select">
-                                        <option>Wählen Sie einen Service aus</option>
-                                        <option>Property Management </option>
-                                        <option>Mortgage Service </option>
-                                        <option>Consulting Service</option>
-                                        <option>Home Buying</option>
-                                        <option>Home Selling</option>
-                                        <option>Escrow Services</option>
-                                    </select>
-                                </div>
-                            </div>
+                            <ul class="messages">
+                                {% for message in messages %}
+                                <li>{{ message|safe }}</li>
+                                {% endfor %}
+                            </ul>
                         </div>
-                        <div class="input-item input-item-textarea ltn__custom-icon">
-                            <textarea name="message" placeholder="Enter message"></textarea>
-                        </div>
-                        <p><label class="input-info-save mb-0"><input type="checkbox" name="agree"> Data protection Link</label></p>
-                        <div class="btn-wrapper mt-0">
-                            <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Absenden</button>
-                        </div>
-                        <p class="form-messege mb-0 mt-20"></p>
-                    </form>
+                    {% else %}
+                        <h4 class="title-2">Kontaktformular</h4>
+                        <form method="POST" enctype="multipart/form-data" action="">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-12">
+                                    {% for radio in form.salutation %}
+                                        <label class="checkbox-item mr-10">{{ radio.choice_label }}
+                                            {{ radio.tag }}
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    {% endfor %}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.firstname }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.lastname }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.email }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.phone_number }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.address }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.zip_code }}
+                                </div>
+                                <div class="col-12">
+                                    {{ form.subject }}
+                                </div>
+                                <div class="col-md-12">
+                                    {{ form.content.label }}
+									{{ form.content }}
+								</div>
+                                <div class="col-md-12">
+                                    {{ form.confirmation.label }}
+								</div>
+                                <div class="col-md-12 mb-4">
+                                        {{ form.data_protection.label_tag }}
+                                        <input type="checkbox" name="{{ form.data_protection.name }}" id="{{ form.data_protection.id_for_label }}" {% if form.data_protection.value %}checked{% endif %}>
+								</div>
+                            </div>
+                            <div class="btn-wrapper mt-0">
+                                <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Absenden</button>
+                            </div>
+                        </form>
+                    {% endif %}
                 </div>
             </div>
         </div>
