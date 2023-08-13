@@ -114,6 +114,14 @@ USE_I18N = True
 
 USE_TZ = True
 
+# EMAIL BACKEND
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.hostinger.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'info@aplusabau.de'
+EMAIL_HOST_PASSWORD = 'Aplusabau8887@'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -130,3 +138,10 @@ MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Jazzmin
+JAZZMIN_SETTINGS = {
+    "site_title": "AA Umzug & Logistik Admin Panel",
+    "site_brand": "AA Umzug & Logistik Admin Panel",
+    "welcome_sign": "AA Umzug & Logistik Admin Panel",
+}
