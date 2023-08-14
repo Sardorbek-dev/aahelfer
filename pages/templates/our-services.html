@@ -208,162 +208,42 @@
 </div>
 <!-- SERVICE AREA END -->
 
-<!-- TESTIMONIAL AREA START (testimonial-8) -->
-<div class="ltn__testimonial-area section-bg-1--- bg-image-top pt-115 pb-65" data-bs-bg="{% static 'img/bg/testominal-1.jpg' %}">
+<!-- TESTIMONIAL AREA START (testimonial-7) -->
+<div class="ltn__testimonial-area section-bg-1--- bg-image-top pt-115" data-bs-bg="{% static 'img/bg/20.jpg' %}">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
-                 data-aos-delay="200" data-aos-duration="800">
-                <div class="section-title-area ltn__section-title-2--- text-center---">
-                    <h6 class="section-subtitle section-subtitle-2--- ltn__secondary-color--- white-color">Testimonial</h6>
-                    <h1 class="section-title white-color">Was unsere Kunden <br>
-                    über uns sagen</h1>
+            <div class="col-lg-12">
+                <div class="section-title-area ltn__section-title-2--- text-center">
+                    <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Testimonial</h6>
+                    <h1 class="section-title">Was unsere Kunden sagen</h1>
                 </div>
             </div>
         </div>
-        <div class="row ltn__testimonial-slider-6-active slick-arrow-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
-             data-aos-delay="200" data-aos-duration="800">
+        <div class="row ltn__testimonial-slider-5-active slick-arrow-1">
+            {% for review in reviews %}
             <div class="col-lg-4">
-                <div class="ltn__testimonial-item ltn__testimonial-item-7 ltn__testimonial-item-8">
+                <div class="ltn__testimonial-item ltn__testimonial-item-7">
                     <div class="ltn__testimoni-info">
-                        <div class="ltn__testimoni-author-ratting">
-                            <div class="ltn__testimoni-info-inner">
-                                <div class="ltn__testimoni-img">
-                                    <img src="{% static 'img/testimonial/1.jpg' %}" alt="#">
-                                </div>
-                                <div class="ltn__testimoni-name-designation">
-                                    <h5>Jacob William</h5>
-                                    <label>Selling Agents</label>
-                                </div>
+                        <p><i class="flaticon-left-quote-1"></i>
+                            {{ review.reviewer_content|truncatechars:195 }}
+                        </p>
+                        <div class="ltn__testimoni-info-inner">
+                            <div class="ltn__testimoni-img">
+                                {% if review.reviewer_salutation == "herr" %}
+                                    <img src="{% static 'img/testimonial/feedback_male.svg' %}" alt="#">
+                                {% else %}
+                                    <img src="{% static 'img/testimonial/feedback_female.svg' %}" alt="#">
+                                {% endif %}
                             </div>
-                            <div class="ltn__testimoni-rating">
-                                <div class="product-ratting">
-                                    <ul>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                    </ul>
-                                </div>
+                            <div class="ltn__testimoni-name-designation">
+                                <h5>{{ review.reviewer_firstname }} {{ review.reviewer_lastname }}</h5>
+                                <label>Privatkunde</label>
                             </div>
                         </div>
-                        <p>
-                            Precious ipsum dolor sit amet
-                            consectetur adipisicing elit, sed dos
-                            mod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad min
-                            veniam, quis nostrud Precious ips
-                            um dolor sit amet, consecte</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="ltn__testimonial-item ltn__testimonial-item-7 ltn__testimonial-item-8">
-                    <div class="ltn__testimoni-info">
-                        <div class="ltn__testimoni-author-ratting">
-                            <div class="ltn__testimoni-info-inner">
-                                <div class="ltn__testimoni-img">
-                                    <img src="{% static 'img/testimonial/2.jpg' %}" alt="#">
-                                </div>
-                                <div class="ltn__testimoni-name-designation">
-                                    <h5>Kelian Anderson</h5>
-                                    <label>Selling Agents</label>
-                                </div>
-                            </div>
-                            <div class="ltn__testimoni-rating">
-                                <div class="product-ratting">
-                                    <ul>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            Precious ipsum dolor sit amet
-                            consectetur adipisicing elit, sed dos
-                            mod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad min
-                            veniam, quis nostrud Precious ips
-                            um dolor sit amet, consecte</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="ltn__testimonial-item ltn__testimonial-item-7 ltn__testimonial-item-8">
-                    <div class="ltn__testimoni-info">
-                        <div class="ltn__testimoni-author-ratting">
-                            <div class="ltn__testimoni-info-inner">
-                                <div class="ltn__testimoni-img">
-                                    <img src="{% static 'img/testimonial/3.jpg' %}" alt="#">
-                                </div>
-                                <div class="ltn__testimoni-name-designation">
-                                    <h5>Adam Joseph</h5>
-                                    <label>Selling Agents</label>
-                                </div>
-                            </div>
-                            <div class="ltn__testimoni-rating">
-                                <div class="product-ratting">
-                                    <ul>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            Precious ipsum dolor sit amet
-                            consectetur adipisicing elit, sed dos
-                            mod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad min
-                            veniam, quis nostrud Precious ips
-                            um dolor sit amet, consecte</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="ltn__testimonial-item ltn__testimonial-item-7 ltn__testimonial-item-8">
-                    <div class="ltn__testimoni-info">
-                        <div class="ltn__testimoni-author-ratting">
-                            <div class="ltn__testimoni-info-inner">
-                                <div class="ltn__testimoni-img">
-                                    <img src="{% static 'img/testimonial/4.jpg' %}" alt="#">
-                                </div>
-                                <div class="ltn__testimoni-name-designation">
-                                    <h5>James Carter</h5>
-                                    <label>Selling Agents</label>
-                                </div>
-                            </div>
-                            <div class="ltn__testimoni-rating">
-                                <div class="product-ratting">
-                                    <ul>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            Precious ipsum dolor sit amet
-                            consectetur adipisicing elit, sed dos
-                            mod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad min
-                            veniam, quis nostrud Precious ips
-                            um dolor sit amet, consecte</p>
-                    </div>
-                </div>
-            </div>
-            <!--  -->
+            {% endfor %}
         </div>
     </div>
 </div>

@@ -6,9 +6,15 @@ from django.contrib import messages
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 from django.conf import settings
+from .models import CustomerReview
 
 class HomePageView(TemplateView):
     template_name = 'home.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['reviews'] = CustomerReview.objects.all()
+        return context
 
 class AboutPageView(TemplateView):
     template_name = 'about.html'
@@ -18,6 +24,12 @@ class ContactCreateView(TemplateView):
 
 class OurServicesView(TemplateView):
     template_name = 'our-services.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['reviews'] = CustomerReview.objects.filter(reviewer_confirmation='ja').values()
+        print('context: ', context)
+        return context
 
 class PrivateMoveView(TemplateView):
     template_name = 'private-move.html'
@@ -87,7 +99,7 @@ class ContactCreateView(CreateView):
         return self.request.user.is_superuser
 
     def get_success_url(self):
-        success_text = 'Vielen Dank! Ihre Nachricht wurde erfolgreich übermittelt. ' \
+        success_text = 'Vielen Dank! Ihre Nachricht wurde erfolgreich übermittelt.<br>' \
                        'Unser Team wird sich in Kürze mit Ihnen in Verbindung setzen! <br>'\
                        '<br>' \
                        'Mit freundlichen Grüßen,<br>' \
@@ -123,9 +135,9 @@ class SendReviewView(CreateView):
         return self.request.user.is_superuser
 
     def get_success_url(self):
-        success_text = 'Vielen Dank! Ihre Bewertung ist eingegangen. <br>' \
-                       'Ihre Bewertung wurde erfolgreich übermittelt. Wir schätzen Ihr Feedback sehr.<br> ' \
-                       'Bei Fragen oder weiteren Anliegen stehen wir Ihnen gerne zur Verfügung!<br>' \
+        success_text = 'Vielen Dank! Ihre Bewertung wurde erfolgreich übermittelt. <br>' \
+                       'Wir schätzen Ihr Feedback sehr. Bei Fragen oder weiteren ' \
+                       'Anliegen stehen wir Ihnen gerne zur Verfügung!<br>' \
                        '<br>' \
                        'Mit freundlichen Grüßen,<br>' \
                        'A&A Team'
