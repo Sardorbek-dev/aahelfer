@@ -10,7 +10,7 @@ class ContactUsForm(forms.ModelForm):
     address = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Straße und Hausnummer*', 'class': "form-control my-2"}))
     zip_code = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Postleitzahl*', 'class': "form-control my-2"}))
     subject = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Subject*', 'class': "form-control my-2"}))
-    data_protection = forms.CharField(widget=forms.TextInput(attrs={'class': "form-control my-2"}))
+    data_protection = forms.BooleanField(required=True)
 
     class Meta:
         model = ContactUs

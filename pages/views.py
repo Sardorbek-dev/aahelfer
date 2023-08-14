@@ -87,8 +87,8 @@ class ContactCreateView(CreateView):
         return self.request.user.is_superuser
 
     def get_success_url(self):
-        success_text = 'Vielen Dank! Ihre Anfrage ist eingegangen.<br> ' \
-                       'Ihre Nachricht wurde erfolgreich übermittelt. Unser Team wird sich in Kürze mit Ihnen in Verbindung setzen! <br>'\
+        success_text = 'Vielen Dank! Ihre Nachricht wurde erfolgreich übermittelt. ' \
+                       'Unser Team wird sich in Kürze mit Ihnen in Verbindung setzen! <br>'\
                        '<br>' \
                        'Mit freundlichen Grüßen,<br>' \
                        'A&A Team'

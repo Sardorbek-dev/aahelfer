@@ -23,60 +23,64 @@
 </div>
 <!-- BREADCRUMB AREA END -->
 
-<!-- CONTACT ADDRESS AREA START -->
-<div class="ltn__contact-address-area mb-90">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
-                    <div class="ltn__contact-address-icon">
-                        <img src="{% static 'img/icons/10.png' %}" alt="Icon Image">
-                    </div>
-                    <h3>E-Mail Adresse</h3>
-                    <p>info@aplusahelfer.de<br>
-                       jobs@aplusahelfer.de</p>
-                </div>
+{% if messages %}
+   <section>
+       <div class="container">
+            <div class="row">
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li>{{ message|safe }}</li>
+                    {% endfor %}
+                </ul>
             </div>
-            <div class="col-lg-4">
-                <div class="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
-                    <div class="ltn__contact-address-icon">
-                        <img src="{% static 'img/icons/11.png' %}" alt="Icon Image">
+       </div>
+   </section>
+{% else %}
+    <!-- CONTACT ADDRESS AREA START -->
+    <div class="ltn__contact-address-area mb-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
+                        <div class="ltn__contact-address-icon">
+                            <img src="{% static 'img/icons/10.png' %}" alt="Icon Image">
+                        </div>
+                        <h3>E-Mail Adresse</h3>
+                        <p>info@aplusahelfer.de<br>
+                           jobs@aplusahelfer.de</p>
                     </div>
-                    <h3>Telefonnummer</h3>
-                    <p>+49 17621754911 <br> +0123-456789</p>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
-                    <div class="ltn__contact-address-icon">
-                        <img src="{% static 'img/icons/12.png' %}" alt="Icon Image">
+                <div class="col-lg-4">
+                    <div class="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
+                        <div class="ltn__contact-address-icon">
+                            <img src="{% static 'img/icons/11.png' %}" alt="Icon Image">
+                        </div>
+                        <h3>Telefonnummer</h3>
+                        <p>+49 17621754911 <br> +0123-456789</p>
                     </div>
-                    <h3>München Office</h3>
-                    <p>Franz-Wolter-Straße 5 <br>
-                        81925 München</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
+                        <div class="ltn__contact-address-icon">
+                            <img src="{% static 'img/icons/12.png' %}" alt="Icon Image">
+                        </div>
+                        <h3>München Office</h3>
+                        <p>Franz-Wolter-Straße 5 <br>
+                            81925 München</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- CONTACT ADDRESS AREA END -->
+    <!-- CONTACT ADDRESS AREA END -->
 
-<!-- CONTACT MESSAGE AREA START -->
-<div class="ltn__contact-message-area mb-120 mb--130">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
-                data-aos-delay="200" data-aos-duration="800">
-                <div class="ltn__form-box contact-form-box box-shadow white-bg">
-                    {% if messages %}
-                        <div class="row">
-                            <ul class="messages">
-                                {% for message in messages %}
-                                <li>{{ message|safe }}</li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    {% else %}
+    <!-- CONTACT MESSAGE AREA START -->
+    <div class="ltn__contact-message-area mb-120 mb--130">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                    data-aos-delay="200" data-aos-duration="800">
+                    <div class="ltn__form-box contact-form-box box-shadow white-bg">
                         <h4 class="title-2">Kontaktformular</h4>
                         <form method="POST" enctype="multipart/form-data" action="">
                             {% csrf_token %}
@@ -112,27 +116,33 @@
                                 </div>
                                 <div class="col-md-12">
                                     {{ form.content.label }}
-									{{ form.content }}
-								</div>
+                                    {{ form.content }}
+                                </div>
                                 <div class="col-md-12">
                                     {{ form.confirmation.label }}
-								</div>
+                                </div>
                                 <div class="col-md-12 mb-4">
-                                        {{ form.data_protection.label_tag }}
-                                        <input type="checkbox" name="{{ form.data_protection.name }}" id="{{ form.data_protection.id_for_label }}" {% if form.data_protection.value %}checked{% endif %}>
-								</div>
+                                    <input type="checkbox" class="mr-10" name="{{ form.data_protection.name }}" id="{{ form.data_protection.id_for_label }}" {% if form.data_protection.value %}checked{% endif %}>
+                                    <span>
+                                        Ich bin mit der Übermittlung meiner Daten an die A&A einverstanden und habe die Datenschutzerklärung gelesen.
+                                        Die zu übermittelnden Daten werden für eine weitere Kontaktaufnahme versendet. Diese geschieht durch Email, Post oder Anruf. 
+                                        Sollten Sie zu einem späteren Zeitpunkt die übermittelten Daten gelöscht haben wollen, so besteht gemäß § 13 TMG ein jederzeitiges Widerrufsrecht. 
+                                        Weitere Informationen zum Thema Datenschutz können Sie unter dem Link <a class="fw-bold"
+                                            href="{% url 'data-protection' %}">Datenschutzerklärung </a> abrufen.
+                                    </span>
+                                </div>
                             </div>
                             <div class="btn-wrapper mt-0">
                                 <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Absenden</button>
                             </div>
                         </form>
-                    {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- CONTACT MESSAGE AREA END -->
+    <!-- CONTACT MESSAGE AREA END -->
+{% endif %}
 
 <!-- GOOGLE MAP AREA START -->
 <div class="container mt-120">
