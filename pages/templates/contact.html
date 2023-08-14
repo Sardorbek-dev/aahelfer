@@ -82,8 +82,19 @@
                     data-aos-delay="200" data-aos-duration="800">
                     <div class="ltn__form-box contact-form-box box-shadow white-bg">
                         <h4 class="title-2">Kontaktformular</h4>
+
                         <form method="POST" enctype="multipart/form-data" action="">
                             {% csrf_token %}
+                            {% if form.errors %}
+                               {% for field in form %}
+                                   {% for error in field.errors %}
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                            {{ error|escape }}
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                   {% endfor %}
+                               {% endfor %}
+                            {% endif %}
                             <div class="row">
                                 <div class="col-12">
                                     {% for radio in form.salutation %}
