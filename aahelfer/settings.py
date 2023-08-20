@@ -83,7 +83,7 @@ DATABASES = {
         'USER': 'sardor_admin',
         'PASSWORD': 'sardor1001@',
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': '',
     }
 }
 
