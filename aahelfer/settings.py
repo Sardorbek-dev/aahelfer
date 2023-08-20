@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'aahelfer.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'aahelferDB',
+        'NAME': 'aahelferdb',
         'USER': 'sardor_admin',
         'PASSWORD': 'sardor1001@',
         'HOST': 'localhost',
