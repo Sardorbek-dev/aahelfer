@@ -28,7 +28,6 @@ class OurServicesView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['reviews'] = CustomerReview.objects.filter(reviewer_confirmation='ja').values()
-        print('context: ', context)
         return context
 
 class PrivateMoveView(TemplateView):
