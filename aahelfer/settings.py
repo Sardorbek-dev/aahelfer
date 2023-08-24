@@ -27,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['194.163.167.46', 'www.umzug-und-logistik.com', 'localhost', '127.0.0.1']
 
-
+DEBUG_PROPAGATE_EXCEPTIONS = True
 # Application definition
 
 INSTALLED_APPS = [
