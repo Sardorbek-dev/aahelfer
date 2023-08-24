@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-%#kbixr@a(d925zilqn6x8!6*-90-$1v=njx*$g#(9rcr(#ml=
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'www.umzug-und-logistik.com', '194.163.167.46']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'www.umzug-und-logistik.com', 'umzug-und-logistik.com', '194.163.167.46']
 
 #DEBUG_PROPAGATE_EXCEPTIONS = True
 # Application definition
