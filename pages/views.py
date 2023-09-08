@@ -69,6 +69,12 @@ class ImprintView(TemplateView):
 class DataProtectionView(TemplateView):
     template_name = 'data-protection.html'
 
+class LoginPageView(TemplateView):
+    template_name = 'auth/login.html'
+
+class RegistrationPageView(TemplateView):
+    template_name = 'auth/registration.html'
+
 
 class ContactCreateView(CreateView):
     form_class = ContactUsForm

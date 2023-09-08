@@ -141,8 +141,8 @@
                                     <li>
                                         <a href="#"><i class="icon-user"></i></a>
                                         <ul>
-                                            <li><a href="#">Anmelden</a></li>
-                                            <li><a href="#">Registrieren</a></li>
+                                            <li><a href="{% url 'login' %}">Anmelden</a></li>
+                                            <li><a href="{% url 'register' %}">Registrieren</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -211,7 +211,7 @@
                 <div class="ltn__utilize-buttons ltn__utilize-buttons-2">
                     <ul>
                         <li>
-                            <a href="#" title="Mein Profil">
+                            <a href="{% url 'login' %}" title="Mein Profil">
                                 <span class="utilize-btn-icon">
                                     <i class="far fa-user"></i>
                                 </span>

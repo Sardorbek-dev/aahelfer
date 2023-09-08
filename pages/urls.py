@@ -2,11 +2,13 @@ from django.urls import path
 from .views import HomePageView, AboutPageView, ContactCreateView, OurServicesView, PrivateMoveView, \
                     CompanyMoveView, ConsultingView, MontageView, TransportView, PackagingView, ProcessView, \
                     HouseholdLiquidationView, CompanyLiquidationView, HouseCleaningView, FaqView, ImprintView, \
-                    DataProtectionView, SendReviewView
+                    DataProtectionView, LoginPageView, RegistrationPageView, SendReviewView
 
 urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
     path('about', AboutPageView.as_view(), name='about'),
+    path('login', LoginPageView.as_view(), name='login'),
+    path('register', RegistrationPageView.as_view(), name='register'),
     path('contact', ContactCreateView.as_view(), name='contact'),
     path('process', ProcessView.as_view(), name='process'),
     path('faq', FaqView.as_view(), name='faq'),
